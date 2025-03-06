@@ -4,27 +4,21 @@ import { Analytics } from "@vercel/analytics/react";
 import "./globals.scss";
 import { silka } from "@/fonts";
 import { ThemeProvider } from "next-themes";
+import Head from "next/head";
 
 export const metadata: Metadata = {
-  title: "Joshua Brigati - Portfolio",
-  description: "A portfolio of Joshua Brigati, a Front-end Software Engineer based in Austin, Texas.",
-  authors: [
-    { name: "Joshua Brigati", url: "www.joshuabrigati.com" },
-  ],
+  title: "Filip Velikoski - Portfolio",
+  description:
+    "A portfolio of Filip Velikoski, a Front-end Software Engineer based in Ohrid, Macedonia.",
+  authors: [{ name: "Filip Velikoski", url: "" }],
   openGraph: {
-    title: "Joshua Brigati - Portfolio",
-    description: "A portfolio of Joshua Brigati, a Front-end Software Engineer based in Austin, Texas.",
-    url: "https://www.joshuabrigati.com",
-    siteName: "Joshua Brigati - Portfolio",
+    title: "Filip Velikoski - Portfolio",
+    description:
+      "A portfolio of Filip Velikoski, a Front-end Software Engineer based in Ohrid, Macedonia",
+    url: "",
+    siteName: "Filip Velikoski - Portfolio",
     type: "website",
-    images: [
-      {
-        url: "https://www.joshuabrigati.com/Screenshot.png",
-        width: 3410,
-        height: 2072,
-        alt: "Joshua Brigati - Portfolio",
-      },
-    ],
+    images: [],
   },
 };
 
@@ -37,16 +31,18 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${silka.className}`}>
         <ThemeProvider attribute="class">
-          <div style={{
-            flex: "none",
-            height: "100%",
-            left: "calc(50.00000000000002% - 100% / 2)",
-            pointerEvents: "none",
-            position: "fixed",
-            top: "0",
-            width: "100%",
-            zIndex: "4",
-          }}>
+          <div
+            style={{
+              flex: "none",
+              height: "100%",
+              left: "calc(50.00000000000002% - 100% / 2)",
+              pointerEvents: "none",
+              position: "fixed",
+              top: "0",
+              width: "100%",
+              zIndex: "4",
+            }}
+          >
             <div
               style={{
                 width: "100%",
@@ -59,6 +55,7 @@ export default function RootLayout({
               }}
             />
           </div>
+
           {children}
         </ThemeProvider>
         <SpeedInsights />

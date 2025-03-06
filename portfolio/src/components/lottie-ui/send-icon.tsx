@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
@@ -43,16 +43,16 @@ const SendIcon = () => {
   const lottieHover = async () => {
     const lot = await import("lottie-web");
     lot.default.play("SendIcon");
-  }
+  };
 
   const lottieLeave = async () => {
     const lot = await import("lottie-web");
     lot.default.stop("SendIcon");
-  }
+  };
 
   return (
     <a
-      href="/JoshuaBrigati-Resume.pdf"
+      href="/FilipVelikoski-CV.pdf"
       target="_blank"
       rel="noreferrer noopener"
       className="relative z-10"

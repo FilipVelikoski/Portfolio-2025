@@ -43,19 +43,15 @@ const Download = () => {
   const lottieHover = async () => {
     const lot = await import("lottie-web");
     lot.default.play("DownloadIcon");
-  }
+  };
 
   const lottieLeave = async () => {
     const lot = await import("lottie-web");
     lot.default.stop("DownloadIcon");
-  }
+  };
 
   return (
-    <a
-      href="/JoshuaBrigati-Resume.pdf"
-      download
-      className="relative z-10"
-    >
+    <a href="/FilipVelikoski-CV.pdf" download className="relative z-10">
       <div
         ref={downloadContainer}
         onMouseEnter={lottieHover}
