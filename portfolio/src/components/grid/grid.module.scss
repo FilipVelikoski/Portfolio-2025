@@ -23,11 +23,11 @@
   user-select: none;
 
   &:hover {
-    cursor: grab;
+    cursor: pointer;
   }
 
   &:active {
-    cursor: grabbing;
+    cursor: pointer;
   }
 }
 
@@ -36,5 +36,44 @@
 
   &:hover {
     box-shadow: rgba(100, 100, 111, 0.1) 0px 5px 24px 0px;
+  }
+}
+.typingCard {
+  background-color: #131417; /* Card background color */
+  border-radius: 12px; /* Rounded corners */
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.typingText {
+  font-size: 28px;
+  color: white;
+  font-family: "Courier New", monospace;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #fff;
+  width: 0;
+  animation: typing 3s steps(15) 1, blink 0.75s step-end infinite;
+}
+
+/* Animation for typing effect */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Animation for cursor blink effect */
+@keyframes blink {
+  50% {
+    border-color: transparent;
   }
 }

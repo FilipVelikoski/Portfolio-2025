@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Badge } from "../../shadcn/Badge";
-import SendmessageIcon from "../../lottie-ui/send-message";
+
 import CardWrapper from "../card-wrapper";
 
 const PortfolioProject = () => {
@@ -10,7 +10,7 @@ const PortfolioProject = () => {
         <div className="relative flex justify-between w-full h-full items-stretch flex-col">
           <div className="absolute h-full w-full aspect-[578/433] shadow-2xl rounded-lg">
             <Image
-              src={"/PortfolioImage.png"}
+              src={"/portfolioproject.png"}
               alt={"Portfolio page example"}
               fill
               style={{

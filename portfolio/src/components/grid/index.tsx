@@ -28,15 +28,41 @@ const ResponsiveGridLayout = WidthProvider(Responsive);
 const Grid = () => {
   const [height, setHeight] = useState(280);
   const [isMounted, setMounted] = useState(false);
+  const [text, setText] = useState("My Portfolio");
+  const [key, setKey] = useState(0);
 
   useEffect(() => {
-    setTimeout(() => {
-      setMounted(true);
-    }, 500);
-  }, []);
+    setMounted(true);
 
+    const timeoutId = setInterval(() => {
+      // Toggle text between "My Portfolio" and "Front End Developer"
+      setText((prevText) => {
+        if (prevText === "My Portfolio") {
+          return "Front End Developer";
+        } else {
+          return "My Portfolio";
+        }
+      });
+    }, 3000); // Change text every 3 seconds
+
+    return () => clearInterval(timeoutId); // Cleanup the interval on component unmount
+  }, []);
   return (
     <div className={styles.container}>
+      {isMounted && (
+        <div
+          className={cn(styles.itemGrab, styles.item)}
+          style={{
+            transitionDuration: "500ms",
+            height: "100%",
+          }}
+        >
+          <div className={styles.typingCard}>
+            <p className={styles.typingText}>{text}</p>
+          </div>
+        </div>
+      )}
+
       <ResponsiveGridLayout
         useCSSTransforms
         className={styles.layout}

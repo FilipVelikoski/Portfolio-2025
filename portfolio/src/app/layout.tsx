@@ -5,6 +5,7 @@ import "./globals.scss";
 import { silka } from "@/fonts";
 import { ThemeProvider } from "next-themes";
 import Head from "next/head";
+import { useEffect, useState } from "react";
 
 export const metadata: Metadata = {
   title: "Filip Velikoski - Portfolio",
