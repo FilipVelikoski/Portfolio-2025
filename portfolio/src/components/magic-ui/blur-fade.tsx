@@ -14,7 +14,7 @@ interface BlurFadeProps {
   delay?: number;
   yOffset?: number;
   inView?: boolean;
-  inViewMargin?: string;
+  inViewMargin?: any;
   blur?: string;
 }
 
@@ -26,7 +26,7 @@ export default function BlurFade({
   delay = 0,
   yOffset = 80,
   inView = false,
-  inViewMargin = "40%", // Default value for margin
+  inViewMargin = "40%",
   blur = "16px",
 }: BlurFadeProps) {
   const ref = useRef(null);

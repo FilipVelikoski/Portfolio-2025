@@ -13,7 +13,7 @@ const MainCard = () => {
         color: "white",
       }}
     >
-      <h2>My Portfolio</h2>
+      <h2>Velikosky</h2>
     </CardWrapper>
   );
 };
