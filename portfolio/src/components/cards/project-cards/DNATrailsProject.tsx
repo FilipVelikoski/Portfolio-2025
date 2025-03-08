@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { Badge } from "../../shadcn/Badge";
-import SendmessageIcon from "../../lottie-ui/send-message";
 import CardWrapper from "../card-wrapper";
 
 const DNATrailsProject = () => {
@@ -36,7 +35,7 @@ const DNATrailsProject = () => {
           </h4>
           <div className="w-full flex gap-2 items-center">
             <h1 className="text-2xl font-medium dark:text-white text-black uppercase opacity-90">
-              DNA Trails
+              DNA Trails - Comming Soon
             </h1>
           </div>
           <div className="flex gap-2 flex-wrap mt-1">

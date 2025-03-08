@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
@@ -43,12 +43,12 @@ const MoonIcon = () => {
   const lottieHover = async () => {
     const lot = await import("lottie-web");
     lot.default.play("MoonIcon");
-  }
+  };
 
   const lottieLeave = async () => {
     const lot = await import("lottie-web");
     lot.default.stop("MoonIcon");
-  }
+  };
 
   return (
     <div
@@ -58,7 +58,9 @@ const MoonIcon = () => {
     >
       <div
         ref={moonIconContainer}
-        className={`h-10 w-10 ${!isLightMode ? "" : "opacity-50"} group-hover/moon:opacity-100 transition-opacity`}
+        className={`h-10 w-10 ${
+          !isLightMode ? "" : "opacity-50"
+        } group-hover/moon:opacity-100 transition-opacity`}
       />
     </div>
   );

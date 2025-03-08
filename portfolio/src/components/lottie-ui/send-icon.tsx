@@ -52,7 +52,7 @@ const SendIcon = () => {
 
   return (
     <a
-      href="/FilipVelikoski-CV.pdf"
+      href="/FilipVelikoskiCV.pdf"
       target="_blank"
       rel="noreferrer noopener"
       className="relative z-10"

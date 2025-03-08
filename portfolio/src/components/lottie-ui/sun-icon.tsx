@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
@@ -58,7 +58,9 @@ const SunIcon = () => {
     >
       <div
         ref={sunIconContainer}
-        className={`h-10 w-10 ${isLightMode ? "" : "opacity-50"} group-hover/sun:opacity-100 transition-opacity`}
+        className={`h-10 w-10 ${
+          isLightMode ? "" : "opacity-50"
+        } group-hover/sun:opacity-100 transition-opacity`}
       />
     </div>
   );

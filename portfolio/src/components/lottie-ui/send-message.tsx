@@ -1,11 +1,17 @@
-"use client"
+"use client";
 
 import { useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
 import SendmessageAnimation from "../../lottie/arrow/Iconly-Sendmessage.json";
 import SendmessageLightAnimation from "../../lottie/arrow/Iconly-SendmessageLight.json";
 
-const SendmessageIcon = ({ link, lottieName }: { link: string, lottieName: string }) => {
+const SendmessageIcon = ({
+  link,
+  lottieName,
+}: {
+  link: string;
+  lottieName: string;
+}) => {
   const { resolvedTheme } = useTheme();
   const isLightMode = resolvedTheme === "light";
   const sendMessageContainer = useRef<HTMLDivElement | null>(null);
@@ -19,10 +25,12 @@ const SendmessageIcon = ({ link, lottieName }: { link: string, lottieName: strin
       renderer: "svg",
       loop: false,
       autoplay: false,
-      animationData: isLightMode ? SendmessageAnimation : SendmessageLightAnimation,
+      animationData: isLightMode
+        ? SendmessageAnimation
+        : SendmessageLightAnimation,
       container: sendMessageContainer.current,
       rendererSettings: {
-        preserveAspectRatio: 'xMinYMin slice',
+        preserveAspectRatio: "xMinYMin slice",
       },
     });
   }
@@ -43,25 +51,27 @@ const SendmessageIcon = ({ link, lottieName }: { link: string, lottieName: strin
   const lottieHover = async () => {
     const lot = await import("lottie-web");
     lot.default.play(lottieName);
-  }
+  };
 
   const lottieLeave = async () => {
     const lot = await import("lottie-web");
     lot.default.stop(lottieName);
-  }
+  };
 
   return (
     <a
       href={link}
-      target='_blank'
-      rel='noreferrer noopener'
+      target="_blank"
+      rel="noreferrer noopener"
       className="relative h-12 w-12 z-10 hover:bg-white dark:hover:bg-zinc-700/25 hover:border border-white/10 flex items-center justify-center rounded-full transition-all"
     >
       <div
         ref={sendMessageContainer}
         onMouseEnter={lottieHover}
         onMouseLeave={lottieLeave}
-        className={`h-8 w-8 opacity-50 ${!isLightMode ? "" : "opacity-50"} hover:opacity-100 transition-opacity`}
+        className={`h-8 w-8 opacity-50 ${
+          !isLightMode ? "" : "opacity-50"
+        } hover:opacity-100 transition-opacity`}
       />
     </a>
   );

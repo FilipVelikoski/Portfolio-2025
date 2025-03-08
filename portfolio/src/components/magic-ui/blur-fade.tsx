@@ -26,17 +26,22 @@ export default function BlurFade({
   delay = 0,
   yOffset = 80,
   inView = false,
-  inViewMargin = "40px",
+  inViewMargin = "40%", // Default value for margin
   blur = "16px",
 }: BlurFadeProps) {
   const ref = useRef(null);
+
   const inViewResult = useInView(ref, { once: true, margin: inViewMargin });
+
   const isInView = !inView || inViewResult;
+
   const defaultVariants: Variants = {
     hidden: { y: yOffset, opacity: 0, filter: `blur(${blur})`, height: "100%" },
     visible: { y: 0, opacity: 1, filter: `blur(0px)`, height: "100%" },
   };
+
   const combinedVariants = variant || defaultVariants;
+
   return (
     <AnimatePresence>
       <motion.div

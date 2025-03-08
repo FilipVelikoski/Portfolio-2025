@@ -22,46 +22,23 @@ import EducationCard from "../cards/education-card";
 import StreetArtistProject from "../cards/project-cards/StreetArtistProject";
 import PortfolioProject from "../cards/project-cards/PortfolioProject";
 import DNATrailsProject from "../cards/project-cards/DNATrailsProject";
+import MainCard from "../cards/main-card";
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
 const Grid = () => {
   const [height, setHeight] = useState(280);
   const [isMounted, setMounted] = useState(false);
-  const [text, setText] = useState("My Portfolio");
-  const [key, setKey] = useState(0);
 
   useEffect(() => {
-    setMounted(true);
-
-    const timeoutId = setInterval(() => {
-      // Toggle text between "My Portfolio" and "Front End Developer"
-      setText((prevText) => {
-        if (prevText === "My Portfolio") {
-          return "Front End Developer";
-        } else {
-          return "My Portfolio";
-        }
-      });
-    }, 3000); // Change text every 3 seconds
-
-    return () => clearInterval(timeoutId); // Cleanup the interval on component unmount
+    setTimeout(() => {
+      setMounted(true);
+    }, 500);
   }, []);
+
   return (
     <div className={styles.container}>
-      {isMounted && (
-        <div
-          className={cn(styles.itemGrab, styles.item)}
-          style={{
-            transitionDuration: "500ms",
-            height: "100%",
-          }}
-        >
-          <div className={styles.typingCard}>
-            <p className={styles.typingText}>{text}</p>
-          </div>
-        </div>
-      )}
+      <MainCard />
 
       <ResponsiveGridLayout
         useCSSTransforms
@@ -142,7 +119,10 @@ const Grid = () => {
           }}
         >
           <BlurFade delay={0.24}>
-            <IconCard title="Linkedin" link="https://www.linkedin.com" />
+            <IconCard
+              title="Linkedin"
+              link="https://www.linkedin.com/in/filip-velikoski-589033231/"
+            />
           </BlurFade>
         </div>
         <div
