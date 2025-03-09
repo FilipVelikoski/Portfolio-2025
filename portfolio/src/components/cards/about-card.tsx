@@ -17,11 +17,8 @@ const AboutCard = () => {
         </div>
 
         <p className="dark:text-white text-slate-900 tracking-wide leading-6 text-xs sm:text-sm">
-          Hi, Im a Front-End Developer with a passion for creating clean,
-          responsive, and user-friendly websites. Im experienced in HTML, CSS,
-          JavaScript, and modern frameworks. Currently seeking new opportunities
-          to apply my skills and grow professionally. Feel free to reach out if
-          you would like to connect!
+          Hi, Im a Junior Front-End Developer with a passion for creating clean,
+          responsive, and user-friendly websites.
           <br />
         </p>
       </div>

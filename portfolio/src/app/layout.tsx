@@ -5,7 +5,6 @@ import "./globals.scss";
 import { silka } from "@/fonts";
 import { ThemeProvider } from "next-themes";
 import Head from "next/head";
-import { useEffect, useState } from "react";
 
 export const metadata: Metadata = {
   title: "Filip Velikoski - Portfolio",
@@ -29,8 +28,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${silka.className}`}>
+    <html lang="en" suppressHydrationWarning={true}>
+      <body
+        className={`${silka.className}`}
+        data-new-gr-c-s-check-loaded="12.12009.0"
+        data-gr-ext-installed=""
+      >
         <ThemeProvider attribute="class">
           <div
             style={{
