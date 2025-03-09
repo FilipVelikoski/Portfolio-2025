@@ -23,6 +23,7 @@ import StreetArtistProject from "../cards/project-cards/StreetArtistProject";
 import PortfolioProject from "../cards/project-cards/PortfolioProject";
 import DNATrailsProject from "../cards/project-cards/DNATrailsProject";
 import MainCard from "../cards/main-card";
+import dynamic from "next/dynamic";
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
@@ -208,5 +209,4 @@ const Grid = () => {
     </div>
   );
 };
-
-export default Grid;
+export default dynamic(() => Promise.resolve(Grid), { ssr: false });

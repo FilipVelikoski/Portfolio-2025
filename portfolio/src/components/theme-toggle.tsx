@@ -5,6 +5,7 @@ import SunIcon from "./lottie-ui/sun-icon";
 import MoonIcon from "./lottie-ui/moon-icon";
 import { useTheme } from "next-themes";
 import CardWrapper from "./cards/card-wrapper";
+import dynamic from "next/dynamic";
 
 const ThemeToggle = () => {
   const { resolvedTheme, setTheme } = useTheme();
@@ -50,4 +51,4 @@ const ThemeToggle = () => {
   );
 };
 
-export default ThemeToggle;
+export default dynamic(() => Promise.resolve(ThemeToggle), { ssr: false });
